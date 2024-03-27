@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "example"
+version = "0.1.0"
+description = ""
+authors = ["Isaias Gutierrez Cruz <isaiasgutierrezqfb@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.1"
+pandera = "^0.18.3"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.1.1"
+pytest-mock = "^3.14.0"
+pytest-clarity = "^1.0.1"
+pytest-sugar = "^1.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+markers = [
+    "features_tests: marks tests as focused to test methods in charge of generate features (run it with '-m features_tests')",
+    "raw_data_tests: marks tests as focused to test raw data methods (run it with '-m raw_data_tests')",
+]
