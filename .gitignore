@@ -1,2 +1,9 @@
 .pytest_cache/
 **/__pycache__/
+.DS_Store
+
+# files to generate files
+extras/data/
+extras/notebooks/
+extras/requirements.txt
+extras/.python-version
